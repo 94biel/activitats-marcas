@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Exercici 11 - Validant sense JS">
+    <meta name="author" content="Biel">
+    <title>Validant sense JS</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1>Formulari amb validació</h1>
+    <p>Prova d'enviar-lo malament i veuràs que el navegador no et deixa.</p>
+
+    <form action="#" method="post">
+
+        <!-- 1. nom obligatori -->
+        <p>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" maxlength="30" required>
+        </p>
+
+        <!-- 2. ha de ser un correu valid -->
+        <p>
+            <label for="email">Correu electrònic:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <!-- 3. minim 8 caracters -->
+        <p>
+            <label for="contrasenya">Contrasenya (mínim 8 caràcters):</label>
+            <input type="password" id="contrasenya" name="contrasenya" minlength="8" required>
+        </p>
+
+        <!-- 4. nomes 9 numeros -->
+        <p>
+            <label for="telefon">Telèfon:</label>
+            <input type="tel" id="telefon" name="telefon" pattern="[0-9]{9}" title="Ha de tenir 9 números" required>
+        </p>
+
+        <p>
+            <label for="edat">Edat:</label>
+            <input type="number" id="edat" name="edat" min="16" max="99" step="1">
+        </p>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</body>
+
+</html>
